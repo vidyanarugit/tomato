@@ -117,7 +117,11 @@ public class TomatoDAOImpl implements TomatoDAO {
 		cr.setProjection(Projections.countDistinct("userId"));
 		cr.setProjection(Projections.avg("rating"));
 		List<Object> list = cr.list();
+		if(list != null && !list.isEmpty() && list.get(0) != null){
 		return (double)list.get(0);
+		}else{
+			return 0.0;
+		}
 	}
 
 	@Override
