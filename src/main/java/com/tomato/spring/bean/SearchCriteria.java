@@ -11,33 +11,33 @@ public class SearchCriteria {
 		this.location = location;
 	}
 	
-	int foodid;
+	double foodid;
 	
-	int servid;
+	double servid;
 	
-	int ambid;
+	double ambid;
 
-	public int getFoodid() {
+	public double getFoodid() {
 		return foodid;
 	}
 
-	public void setFoodid(int foodid) {
+	public void setFoodid(double foodid) {
 		this.foodid = foodid;
 	}
 
-	public int getServid() {
+	public double getServid() {
 		return servid;
 	}
 
-	public void setServid(int servid) {
+	public void setServid(double servid) {
 		this.servid = servid;
 	}
 
-	public int getAmbid() {
+	public double getAmbid() {
 		return ambid;
 	}
 
-	public void setAmbid(int ambid) {
+	public void setAmbid(double ambid) {
 		this.ambid = ambid;
 	}
 
