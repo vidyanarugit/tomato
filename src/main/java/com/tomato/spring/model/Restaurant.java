@@ -14,32 +14,32 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="restaurants")
+@Table(name="RESTAURANT")
 //@NamedQueries({
 //	@NamedQuery(name="updateavgrating", query = "update Restaurant r set r.rating = : avgrating where r.id = :id")})
 public class Restaurant {
 	
 	@Id
-	@Column(name="id", nullable=false)
+	@Column(name="ID", nullable=false)
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	
-	@Column(name = "name", nullable= false)
+	@Column(name = "NAME", nullable= false)
 	private String name;
 	
-	@Column(name="address")
+	@Column(name="ADDRESS")
 	private String address; 
 	
-	@Column(name="city")
+	@Column(name="CITY")
 	private String city;
 	
-	@Column(name="image")
+	@Column(name="IMAGE")
 	private String image;
 	
-	@Column(name = "rating")
+	@Column(name = "RATING")
 	private double avgRating;
 	
-	@Column(name = "food")
+	@Column(name = "AVFOOD")
 	private double avgFood;
 	
 	public double getAvgServ() {
@@ -58,10 +58,10 @@ public class Restaurant {
 		this.avgAmb = avgAmb;
 	}
 
-	@Column(name = "service")
+	@Column(name = "AVSERVICE")
 	private double avgServ;
 	
-	@Column(name = "ambience")
+	@Column(name = "AVAMBIENCE")
 	private double avgAmb;
 	
 	/*@OneToMany(mappedBy="restaurant", targetEntity=Rating.class)
