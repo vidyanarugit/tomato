@@ -43,7 +43,7 @@ public class TomatoServiceImpl implements TomatoService {
 		this.tomatoDAO.addRating( ratings );
 		Restaurant restaurant = this.tomatoDAO.getRestaurantById(ratings.get(1).getRestaurantID());
 		if(restaurant != null){
-		restaurant.setAvgAmb(this.tomatoDAO.calculateAvgForRest(restaurant.getId(),"Ambeience"));
+		restaurant.setAvgAmb(this.tomatoDAO.calculateAvgForRest(restaurant.getId(),"Ambience"));
 		restaurant.setAvgFood(this.tomatoDAO.calculateAvgForRest(restaurant.getId(),"Food"));
 		restaurant.setAvgServ(this.tomatoDAO.calculateAvgForRest(restaurant.getId(),"Service"));
 		this.tomatoDAO.updateRestaurant( restaurant );
