@@ -112,7 +112,7 @@
 	<% } %>
 	<table id= "myTab" border="1" class="table table-striped jumbotron">
 	
-	<%  if ( ratings != null && !ratings.isEmpty() ) { %>
+	<%  if ( ratings != null && !ratings.isEmpty() && restaurant1 != null) { %>
 	
 <div><th><h5><%= restaurant1.getName() %></h5></th></div>
 	<tr>
@@ -145,28 +145,30 @@
 
 	</table>
 	
+	<% if (restaurant1 != null) { %> 
+	
 	<form id="ratingView" action="/MyRestaurantReview/Rating/add" method="post">
 	<input id="Rest_ID" name="restId" type="hidden" value='<%= restaurant1.getId() %>'/>
 <table>
 <tr>
 		<td>Your Name</td>
-		<td><input id="name"  required="required" ename="uName" type="text" value=""/></td> 
+		<td><input id="uName"  required="required" name="uName" type="text" value=""/></td> 
 	</tr>
 	<tr>
 		<td>look and feel</td>
-		<td><input id="name" required="required" name="ambRating" type="number" maxlength="1" value=""/></td> 
+		<td><input id="ambRating" required="required" name="ambRating" type="number" maxlength="1" value=""/></td> 
 	</tr>
 	<tr>
 		<td>Food</td>
-		<td><input id="name" name="foodRating" required="required" type="number" value=""/></td> 
+		<td><input id="foodRating" name="foodRating" required="required" type="number" value=""/></td> 
 	</tr>
 	<tr>
 		<td>Service</td>
-		<td><input id="name" name="serviceRating" required="required" type="number" value=""/></td> 
+		<td><input id="serviceRating" name="serviceRating" required="required" type="number" value=""/></td> 
 	</tr>
 	<tr>
 		<td>Review</td>
-		<td><input id="name" name="review" required="required" type="text" value=""/></td> 
+		<td><input id="review" name="review" required="required" type="text" value=""/></td> 
 	</tr>
 	
 	<tr>
@@ -175,6 +177,7 @@
 	</tr>
 </table>	
 </form>
+<% } %>
 
 	
      <div class="featurette">
@@ -191,7 +194,7 @@
  <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>Â© 2013 Company, Inc. Â· <a href="#">Privacy</a> Â· <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
